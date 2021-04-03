@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    color: white;
+   
+    background-image: url('https://wallpapercave.com/wp/wp2122184.jpg');
+}
+input{
+    color: black;
+}
+

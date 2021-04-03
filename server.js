@@ -2,6 +2,7 @@ const express = require('express')
 const { response } = require('express')
 const app = express()
 const cors = require('cors')// download the cors package and now use it
+const { url } = require('inspector')
 const PORT = 8000
 
 
@@ -24,12 +25,14 @@ let rappers = {
     'q-tip': {
         'age': 50,
         'birthName': 'Kamaal Ibn Fareed',
-        'birthLocation': 'Harlem, New York, NY'
+        'birthLocation': 'Harlem, New York, NY',
+        'image' : ('https://i.pinimg.com/originals/28/7e/8d/287e8db49635230897545c5101c65b7d.jpg')
     },
     'jarobi': {
         'age': 49,
         'birthName': 'Jarobi White',
         'birthLocation': 'St, Albans, New York, NY'
+        
     },
     'unknown': {
         'age': 1,

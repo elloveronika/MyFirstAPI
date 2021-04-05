@@ -10,11 +10,7 @@ const PORT = 8000
 
 app.use(cors())
 
-let db,
-    dbConnectionStr = '',
-    dbName = 'rap'
 
-MongoClient.connect( dbConnectionStr, { useUnifiedTopology: true })
 
 let rappers = { 
     'shaheed': {
@@ -61,14 +57,7 @@ app.get('/api/rappers/:rapperName', (request, response) => {
     }
     
 })
-app.delete('/deleteRapper' , (request , response ) => {
-    db.collection('rappers').deleteOne({stageName: request.body.stageNameS})
-    .then(result => {
-        console.log('Rappers Deleted')
-        response.json('Rappers Deleted')
-    })
-    .catch(error => console.log(error(error)))
-})
+
 
 app.listen(PORT, () => {
     console.log(`Server runninng on ${PORT}`)
